@@ -10,7 +10,7 @@
     "react-scripts": "3.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "port=3010 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -30,6 +30,6 @@
       "last 1 safari version"
     ]
   },
-  "main": "server/server.js"
-  
+  "main": "server/server.js",
+  "proxy": "http://localhost:3010"
 }

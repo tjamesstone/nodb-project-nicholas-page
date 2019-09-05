@@ -40,7 +40,7 @@ export default class MessageBoard extends Component {
   }
 
   editMessage( id, text ) {
-    console.log( 'editMessage:', id, text )
+    // console.log( 'editMessage:', id, text )
     axios.put( `/api/messages/${id}`, { text } ).then( res => {
       this.setState({ messages: res.data })
     });

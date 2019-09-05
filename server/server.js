@@ -11,7 +11,7 @@ app.get(baseUrl, ctrl.read)
 app.put(`${baseUrl}/:id`, ctrl.update)
 app.delete(`${baseUrl}/:id`, ctrl.delete)
 
-let port = 3001;
+let port = 3010;
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
 })

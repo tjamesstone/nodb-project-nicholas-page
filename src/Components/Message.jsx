@@ -33,7 +33,11 @@ export default class Message extends Component {
     // console.log( id, text );
     return (
       <div className="MessageContainer">
-        <p className="timeanddate">{time}</p>
+        <div className="timeandthedate">
+          <p className="timeanddate">{time}</p>
+        </div>
+        
+        <div className="actualmessage">
         {
           editting
           ?
@@ -41,6 +45,7 @@ export default class Message extends Component {
           :
             <p className="messagetext">{text}</p>
         }
+        </div>
         <button className="editbutton" onClick={ () => this.setState({ editting: !this.state.editting, text }) }> Edit </button>
         <button className="deletebutton" onClick={ () => remove( id ) }>  Delete </button>
       </div>

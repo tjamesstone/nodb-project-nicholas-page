@@ -1,18 +1,12 @@
-import React from 'react';
-
+import React, {Component} from 'react';
 import './App.css';
+import MessageBoard from './Components/MessageBoard'
 
 class App extends Component{
-  constructor(){
-    super()
-    this.state = {
-
-    }
-  }
   render() {
     return (
     <div className="App">
-      
+      <MessageBoard />
     </div>
   )
   }

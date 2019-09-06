@@ -18,13 +18,13 @@ export default class Origin extends Component{
     componentDidMount (){
          
         axios.get('http://geodb-free-service.wirefreethought.com/v1/geo/cities/126398').then( res => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({hometown: res.data.data})
         
             
         })
         axios.get('http://geodb-free-service.wirefreethought.com/v1/geo/cities/127930').then( res => {
-            console.log(res.data)
+            // console.log(res.data)
             this.setState({currentcity: res.data.data})
     
             

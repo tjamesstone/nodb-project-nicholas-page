@@ -6,7 +6,8 @@ export default class LikeNick extends Component{
     constructor( ){
         super()
         this.state ={
-            likes : 0
+            likes : 0,
+            img: ''
         
             
         }
@@ -27,10 +28,27 @@ export default class LikeNick extends Component{
             likes: likes -1 
         }))}
 
+    imageSetter(){
+        if(this.state.likes > -5 && this.state.likes <5){
+            this.setState({
+                img: normal
+            })
+        // } else if(this.state.likes >4 ){
+        //     this.setState(({img}) => ({
+        //         img: normal
+        //     }))
+        // } else {
+        //     this.setState(({img}) => ({
+        //         img: sad
+        //     }))
+    }
+}
+
     render(){
+        
         return(
             <div className="likenick">
-                <img src={normal} alt="Thumbs Up from Nick Cage"/>
+                <img src={this.state.img} alt="Thumbs Up from Nick Cage"/>
                 <h2>What Say Ye?</h2>
                 <h3>Like or Disklike Nick</h3>
                 <div className="upanddown">
@@ -47,4 +65,4 @@ export default class LikeNick extends Component{
             </div>
         )
     }
-}
+    }

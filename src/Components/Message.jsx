@@ -33,8 +33,10 @@ export default class Message extends Component {
     // console.log( id, text );
     return (
       <div className="MessageContainer">
-        <div className="timeandthedate">
-          <p className="timeanddate">{time}</p>
+        <div className="datecontainer">
+          <div className="timeandthedate">
+            <p className="timeanddate">{time}</p>
+           </div>
         </div>
         
         <div className="actualmessage">
@@ -46,8 +48,10 @@ export default class Message extends Component {
             <p className="messagetext">{text}</p>
         }
         </div>
-        <button className="editbutton" onClick={ () => this.setState({ editting: !this.state.editting, text }) }> Edit </button>
-        <button className="deletebutton" onClick={ () => remove( id ) }>  Delete </button>
+        <div className="buttonscontainer">
+          <button className="editbutton" onClick={ () => this.setState({ editting: !this.state.editting, text }) }> Edit </button>
+          <button className="deletebutton" onClick={ () => remove( id ) }>  Delete </button>
+        </div>
       </div>
     )
   }

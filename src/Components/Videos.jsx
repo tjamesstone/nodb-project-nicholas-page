@@ -9,6 +9,7 @@ export default class Videos extends Component {
                {/* <h2>Nick When He's Sad</h2> */}
                 <div className="bees">
                     <iframe 
+                    className="actualvideo"
                      width="560" 
                      title="video"
                       height="315" 

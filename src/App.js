@@ -5,6 +5,7 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import Origin from './Components/Origin'
 import Videos from './Components/Videos'
+import LikeNick from './Components/LikeNick'
 
 
 
@@ -18,6 +19,7 @@ class App extends Component{
       <MessageBoard />
       <Videos />
       <Origin />
+      <LikeNick />
       <Footer />
     </div>
   )

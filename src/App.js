@@ -14,7 +14,7 @@ class App extends Component{
     <div className="App">
       <Header />
       
-      <h1>Leave Some Thoughts About Nick</h1>
+      
       <MessageBoard />
       <Videos />
       <Origin />

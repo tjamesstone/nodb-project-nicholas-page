@@ -55,6 +55,7 @@ export default class MessageBoard extends Component {
 
   render() {
     return (
+      <div className="realmessageboard"> <h1>Leave Some Thoughts About Nick</h1>
       <div className="MessageBoard">
         
         <div className="MessageBoardMessages">
@@ -78,6 +79,7 @@ export default class MessageBoard extends Component {
           />
         </div>
         
+      </div>
       </div>
     )
   }

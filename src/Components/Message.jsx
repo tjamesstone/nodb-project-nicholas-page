@@ -1,4 +1,10 @@
 import React, { Component } from "react";
+import img1 from '../pics/img1.jpg'
+import img2 from '../pics/img2.jpg'
+import img3 from '../pics/img3.jpg'
+import img4 from '../pics/img4.jpg'
+import img5 from '../pics/img5.jpg'
+import img6 from '../pics/img6.jpg'
 
 
 
@@ -7,7 +13,9 @@ export default class Message extends Component {
     super(props);
     this.state = {
       editting: false,
-      text: this.props.text
+      text: this.props.text,
+      rand1: Math.floor(Math.random() *6),
+      pics: [img1, img2, img3, img4, img5, img6]
     };
 
     this.handleChange = this.handleChange.bind( this );
@@ -33,13 +41,15 @@ export default class Message extends Component {
     // console.log( id, text );
     return (
       <div className="MessageContainer">
-        <div className="datecontainer">
-          <div className="timeandthedate">
-            <p className="timeanddate">{time}</p>
-           </div>
-        </div>
+        <div className="nickimage">
+          <img src={this.state.pics[this.state.rand1]} width="100%" height="100%" alt="sexy nick cage pic"/>
+        </div> 
+        
         
         <div className="actualmessage">
+        <div className="timeandthedate">
+            <p className="timeanddate">{time}</p>
+           </div>
         {
           editting
           ?
@@ -48,9 +58,13 @@ export default class Message extends Component {
             <p className="messagetext">{text}</p>
         }
         </div>
+       
         <div className="buttonscontainer">
-          <button className="editbutton" onClick={ () => this.setState({ editting: !this.state.editting, text }) }> Edit </button>
-          <button className="deletebutton" onClick={ () => remove( id ) }>  Delete </button>
+          <div className="buttonsonly">
+              <button className="editbutton" onClick={ () => this.setState({ editting: !this.state.editting, text }) }> Edit </button>
+              <button className="deletebutton" onClick={ () => remove( id ) }>  Delete </button>
+          </div>
+          
         </div>
       </div>
     )

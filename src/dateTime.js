@@ -17,5 +17,5 @@ export default function() {
     time = `${hour}:${minute} ${ampm}`;
   
     // console.log( `${date} - ${time}` );
-    return `${date} - ${time}`;
+    return `${date} ${time}`;
   }

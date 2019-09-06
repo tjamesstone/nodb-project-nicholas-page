@@ -56,6 +56,7 @@ export default class MessageBoard extends Component {
   render() {
     return (
       <div className="MessageBoard">
+        
         <div className="MessageBoardMessages">
             {
               this.state.messages.map( message => ( 
@@ -70,7 +71,7 @@ export default class MessageBoard extends Component {
             }
         </div>
         <div className="MessageBoardInput">
-          <input placeholder="Your love for Nick Cage goes here" 
+          <input placeholder="Your love for Nick Cage goes here. Press enter to share" 
                  onKeyPress={ this.createMessage }
                  onChange={ this.handleChange }
                  value={ this.state.text }

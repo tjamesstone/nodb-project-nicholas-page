@@ -63,15 +63,25 @@ header {
   justify-content: center;
   align-items: center;
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 1s;
   animation-iteration-count: 999999999;
   animation-direction: alternate;
 }
 
+@keyframes footerExample {
+  from {background-color: #da287b; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  to {background-color: #11269e; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+}
+
 footer {
-  background: black;
+  
   color: white;
   width: 100%;
+  animation-name: footerExample;
+  animation-duration: 1s;
+  animation-iteration-count: 999999999;
+  animation-direction: alternate;
 
 }
 

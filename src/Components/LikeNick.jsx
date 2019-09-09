@@ -57,7 +57,7 @@ export default class LikeNick extends Component{
     }}
     
     render(){
-        console.log(this.state.likes)
+        // console.log(this.state.likes)
         return(
             <div className="likenick">
                 <img src={this.state.img} alt="Thumbs Up from Nick Cage"/>

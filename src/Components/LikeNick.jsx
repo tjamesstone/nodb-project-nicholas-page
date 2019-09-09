@@ -62,16 +62,16 @@ export default class LikeNick extends Component{
             <div className="likenick">
                 <img src={this.state.img} alt="Thumbs Up from Nick Cage"/>
                 <h2>What Say Ye?</h2>
-                <h3>Like or Disklike Nick</h3>
+                <h3>Do you love Nick?</h3>
                 <div className="upanddown">
                     <h2>{this.state.likes}</h2>
                     <button
                     onClick={this.dislikeFn}>
-                        Dislike
+                        Nay
                     </button>
                     <button
                     onClick={this.likeFn}
-                    >Like</button>
+                    >Yay</button>
                     
                 </div>
             </div>

@@ -10,16 +10,14 @@ import LikeNick from './Components/LikeNick'
 
 
 class App extends Component{
-  
+
 
   render() {
     return (
     <div className="App">
       <Header />
-      
-      
-      <MessageBoard />
       <Videos />
+      <MessageBoard />
       <Origin />
       <LikeNick />
       <Footer />

@@ -5,6 +5,7 @@ import img3 from '../pics/img3.jpg'
 import img4 from '../pics/img4.jpg'
 import img5 from '../pics/img5.jpg'
 import img6 from '../pics/img6.jpg'
+const img7 = "https://media.licdn.com/dms/image/C5603AQExu85Jt4v_Vg/profile-displayphoto-shrink_800_800/0?e=1573689600&v=beta&t=P0WZr9De32HZr68FXCgHuUPfx12Ud2yonOOmHH9Pe5k"
 
 
 
@@ -14,8 +15,8 @@ export default class Message extends Component {
     this.state = {
       editting: false,
       text: this.props.text,
-      rand1: Math.floor(Math.random() *6),
-      pics: [img1, img2, img3, img4, img5, img6]
+      rand1: Math.floor(Math.random() *7),
+      pics: [img1, img2, img3, img4, img5, img6, img7]
     };
 
     this.handleChange = this.handleChange.bind( this );

@@ -7,7 +7,7 @@ export default class LikeNick extends Component{
         super()
         this.state ={
             likes : 0,
-            img: ''
+            img: normal
         
             
         }
@@ -16,36 +16,48 @@ export default class LikeNick extends Component{
         this.dislikeFn = this.dislikeFn.bind(this)
     }
 
+    displayFn(){
+        console.log(this.state.img)
+    }
 
 
     likeFn = () => {
-        this.setState(({likes}) => ({ 
-            likes: likes +1 
-        }))}
+        this.setState({
+            likes: this.state.likes +1 
+        }
+        )
+        
+        
+        }
     
     dislikeFn = () => {
-        this.setState(({likes}) => ({ 
-            likes: likes -1 
-        }))}
+        this.setState({
+            likes: this.state.likes -1 
+        }
+       )
+        
+        }
 
-    imageSetter(){
+    componentDidUpdate(prevProps, prevState){
+        if(this.state.likes !== prevState.likes){
         if(this.state.likes > -5 && this.state.likes <5){
             this.setState({
                 img: normal
             })
-        // } else if(this.state.likes >4 ){
-        //     this.setState(({img}) => ({
-        //         img: normal
-        //     }))
-        // } else {
-        //     this.setState(({img}) => ({
-        //         img: sad
-        //     }))
-    }
-}
-
+       } else if (this.state.likes >=5){
+           this.setState({
+               img: happy
+           })
+       } else if (this.state.likes <=-5){
+           this.setState({
+               img:sad
+           })
+       }
+    //    console.log(this.state.likes)
+    }}
+    
     render(){
-        
+        console.log(this.state.likes)
         return(
             <div className="likenick">
                 <img src={this.state.img} alt="Thumbs Up from Nick Cage"/>

@@ -11,11 +11,12 @@ export default class Origin extends Component{
             currentcity: '',
             displayinfo: false
         }
+        this.fetchData = this.fetchData.bind(this)
     }
 
     
 
-    componentDidMount (){
+    fetchData (){
          
         axios.get('http://geodb-free-service.wirefreethought.com/v1/geo/cities/126398').then( res => {
             // console.log(res.data)
@@ -42,6 +43,7 @@ export default class Origin extends Component{
         return(
             <div className="realorigin">
                 <h1>Learn about Nick's Residential History</h1>
+                <button className="learnmore" onClick={this.fetchData}>Learn</button>
             <div className="origin">
                 <div className="hometown">
                     <h2>Nick Cage's Hometown</h2>
